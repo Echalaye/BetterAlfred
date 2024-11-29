@@ -1,0 +1,13 @@
+version: "2"
+services:
+
+  # Add the phpmyadmin image at the latest tag on port 8080:8080
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - "db"
+    environment:
+      PMA_ARBITRARY: 1
