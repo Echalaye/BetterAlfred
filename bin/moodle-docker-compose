@@ -224,7 +224,7 @@ then
     # If no bind ip has been configured (bind_ip:port), default to 127.0.0.1
     if [[ ! $MOODLE_DOCKER_WEB_PORT == *":"* ]]
     then
-        MOODLE_DOCKER_WEB_PORT=127.0.0.1:$MOODLE_DOCKER_WEB_PORT
+        MOODLE_DOCKER_WEB_PORT=192.168.1.129:$MOODLE_DOCKER_WEB_PORT
     fi
     dockercompose="${dockercompose} -f ${basedir}/webserver.port.yml"
 fi

@@ -22,7 +22,7 @@ if (getenv('MOODLE_DOCKER_DBTYPE') === 'sqlsrv') {
 }
 
 if (empty($_SERVER['HTTP_HOST'])) {
-    $_SERVER['HTTP_HOST'] = 'localhost';
+    $_SERVER['HTTP_HOST'] = '192.168.1.129';
 }
 if (strpos($_SERVER['HTTP_HOST'], '.gitpod.io') !== false) {
     // Gitpod.io deployment.
@@ -32,7 +32,7 @@ if (strpos($_SERVER['HTTP_HOST'], '.gitpod.io') !== false) {
     $CFG->site_is_public = false;
 } else {
     // Docker deployment.
-    $host = 'localhost';
+    $host = '192.168.1.129';
     if (!empty(getenv('MOODLE_DOCKER_WEB_HOST'))) {
         $host = getenv('MOODLE_DOCKER_WEB_HOST');
     }
