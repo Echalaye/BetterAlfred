@@ -62,4 +62,3 @@ UPGRADING-CURRENT.md
 .env
 moodledata/*
 database/*
-.gitignore
